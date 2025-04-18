@@ -10,3 +10,12 @@ class CounterCubit extends Cubit<int> {
     print(change);
   }
 }
+
+class SimpleBlocObserver extends BlocObserver{
+ 
+ @override
+  void onChange(BlocBase bloc, Change change){
+    super.onChange(bloc, change);
+    print('Cubit: ${bloc.runtimeType} $change');
+  }
+}
